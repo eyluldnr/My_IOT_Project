@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>IoT Sensör Simülasyonu</title>
+    <link rel="stylesheet" href="IoTStil.css">
+</head>
+
+<body>
+    <div class="sensor-container">
+        <div class="sensor-icon">🌡️</div>
+        <div class="sensor-data" id="temperature">Sıcaklık: -- °C</div>
+        <div class="sensor-data" id="humidity">Nem: -- %</div>
+        <div class="sensor-data" id="location">Konum: --</div>
+        <button class="update-button" onclick="updateSensorData()">Veriyi Güncelle</button>
+    </div>
+ 
+    <script>
+        function updateSensorData() {
+            var temperature = Math.floor(Math.random() * 50); // Rastgele bir sıcaklık değeri oluştur
+            var humidity = Math.floor(Math.random() * 100); // Rastgele bir nem değeri oluştur
+            var location = "Istanbul"; // Örnek olarak sabit bir konum bilgisi
+ 
+            document.getElementById('temperature').innerText = 'Sıcaklık: ' + temperature + ' °C';
+            document.getElementById('humidity').innerText = 'Nem: ' + humidity + ' %';
+            document.getElementById('location').innerText = 'Konum: ' + location;
+        }
+    </script>
+</body>
+</html>
